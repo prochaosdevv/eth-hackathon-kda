@@ -84,12 +84,12 @@ export function MintNFTDialog({ contractAddress, onSuccess }: MintNFTDialogProps
 
   useEffect(() => {
     console.log(minHash,minted)
-    if (isConfirmingMint) {      
+    if (!isConfirmingMint && minted) {      
       setTokenURI("")
       setOpen(false)
       onSuccess?.()
     }
-  },[isConfirmingMint])
+  },[isConfirmingMint,minted])
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
