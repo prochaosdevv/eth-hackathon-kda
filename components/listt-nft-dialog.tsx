@@ -33,7 +33,7 @@ interface RentNFTDialogProps {
 export function ListNFTDialog({ tokenId, listingContractAddress , contractAddress, onSuccess, children }: RentNFTDialogProps) {
   const [open, setOpen] = useState(false)
   const [rentalPrice, setRentalPrice] = useState("0.01") // days
-  const [numberOfRents, setNumberOfRents] = useState("0") // days
+  const [numberOfRents, setNumberOfRents] = useState("1") // days
   
   const [isLoading, setIsLoading] = useState(false)
   // const { address, isConnected } = useWallet()
